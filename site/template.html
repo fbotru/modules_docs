@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06182b">
+  <meta name="description" content="Модули FBOT для футбольных клубов: тренировки, KPI, протоколы и спортивный SMM.">
+  <meta property="og:title" content="Модули FBOT — цифровая система футбольного клуба">
+  <meta property="og:description" content="Четыре модуля, которые снимают рутину и помогают клубу расти.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fbotru.github.io/modules_docs/">
+  <title>Модули FBOT — цифровая система футбольного клуба</title>
+  <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">К содержанию</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="FBOT, начало страницы">
+      <img src="assets/brand-mark.svg" alt="" width="38" height="44">
+      <span><strong>FBOT</strong><small>CLUB SYSTEM</small></span>
+    </a>
+    <nav aria-label="Основная навигация">
+      <a href="#modules">Модули</a>
+      <a href="#smm-styles">Стили SMM</a>
+      <a href="#connect">Подключение</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="hero" id="top">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__copy">
+        <p class="eyebrow"><span></span> DIGITAL FOOTBALL OPERATIONS</p>
+        <h1>Клуб работает<br><em>как команда.</em></h1>
+        <p class="hero__lead">FBOT собирает игровую, организационную и медийную работу клуба внутри Telegram — без лишних сервисов и ручной рутины.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#modules">Изучить модули</a>
+          <a class="button button--ghost" href="#connect">Как подключить</a>
+        </div>
+      </div>
+      <div class="hero__visual" aria-label="Четыре модуля FBOT">
+        <div class="pitch"><span></span><span></span><span></span></div>
+        <div class="orbit orbit--one"><b>01</b><span>TRAINING</span></div>
+        <div class="orbit orbit--two"><b>02</b><span>KPI</span></div>
+        <div class="orbit orbit--three"><b>03</b><span>PROTOCOL</span></div>
+        <div class="orbit orbit--four"><b>04</b><span>SMM</span></div>
+        <div class="hero__crest"><img src="assets/brand-mark.svg" alt="" width="96" height="112"><strong>4</strong><span>МОДУЛЯ</span></div>
+      </div>
+      <div class="hero__stats">
+        <div><strong>01</strong><span>единая точка управления</span></div>
+        <div><strong>24/7</strong><span>бот работает вместе с клубом</span></div>
+        <div><strong>∞</strong><span>возможностей для роста</span></div>
+      </div>
+    </section>
+
+    <section class="section modules" id="modules">
+      <div class="section-heading">
+        <p class="eyebrow">Система по частям</p>
+        <h2>Выберите то, что нужно клубу сейчас</h2>
+        <p>Каждый модуль решает отдельную задачу и подключается независимо. Вместе они образуют единый рабочий контур.</p>
+      </div>
+      <div class="module-grid">{{MODULE_CARDS}}</div>
+    </section>
+
+    <section class="section module-list" aria-label="Подробности модулей">
+      {{MODULE_SECTIONS}}
+    </section>
+
+    <section class="section smm-showcase" id="smm-styles">
+      <div class="section-heading section-heading--split">
+        <div><p class="eyebrow">SMM / STYLE SYSTEM</p><h2>Клуб узнают<br>с первого кадра</h2></div>
+        <p>Не набор случайных шаблонов, а целостный визуальный язык. Выбираем направление, адаптируем герб, палитру и детали — затем данные сами превращаются в готовые публикации.</p>
+      </div>
+      <div class="gallery">{{GALLERY}}</div>
+    </section>
+
+    <section class="section workflow">
+      <div class="section-heading"><p class="eyebrow">Как это работает</p><h2>От события до результата</h2></div>
+      <ol>
+        <li><span>01</span><strong>Бот получает данные</strong><p>Расписание, составы, протоколы и результаты становятся единым источником.</p></li>
+        <li><span>02</span><strong>Модуль выполняет работу</strong><p>Напоминает, считает, отправляет, формирует отчёт или собирает визуал.</p></li>
+        <li><span>03</span><strong>Клуб получает результат</strong><p>Игроки и администраторы видят всё в привычном интерфейсе Telegram.</p></li>
+      </ol>
+    </section>
+
+    <section class="section connect" id="connect">
+      <div>
+        <p class="eyebrow">Подключение</p>
+        <h2>Начните с одного модуля.<br>Добавляйте остальные по мере роста.</h2>
+      </div>
+      <div class="connect__card">
+        <span class="connect__icon">↗</span>
+        <p>Откройте Telegram-бот и перейдите:</p>
+        <strong>Клуб <i>→</i> Модули</strong>
+        <p>Вы увидите активные возможности и сможете отправить заявку на подключение.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#top"><img src="assets/brand-mark.svg" alt="" width="34" height="40"><span><strong>FBOT</strong><small>FOOTBALL CLUB SYSTEM</small></span></a>
+    <p>Автоматизируем рутину. Оставляем футбол.</p>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Просмотр визуального стиля">
+    <button type="button" class="lightbox__close" aria-label="Закрыть">×</button>
+    <img src="" alt="">
+    <p></p>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
