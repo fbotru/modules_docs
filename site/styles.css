@@ -463,7 +463,7 @@ h1 em {
   max-width: 830px;
   margin-bottom: 0;
   font-size: clamp(3rem, 5.8vw, 5.6rem);
-  line-height: .98;
+  line-height: 1.55;
 }
 
 #capabilities-title {
