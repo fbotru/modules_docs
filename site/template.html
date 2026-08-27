@@ -3,112 +3,252 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#06182b">
-  <meta name="description" content="Модули FBOT для футбольных клубов: тренировки, KPI, протоколы и спортивный SMM.">
-  <meta property="og:title" content="Модули FBOT — цифровая система футбольного клуба">
-  <meta property="og:description" content="Четыре модуля, которые снимают рутину и помогают клубу расти.">
+  <meta name="theme-color" content="#04182d">
+  <meta name="description" content="SportsSmartBot автоматизирует матчи, тренировки, финансы, статистику и клубный контент в Telegram.">
+  <meta property="og:title" content="SportsSmartBot — автоматическое управление клубом">
+  <meta property="og:description" content="Один Telegram-бот для операционного ритма клуба в командных видах спорта.">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
   <meta property="og:url" content="https://fbotru.github.io/modules_docs/">
-  <title>Модули FBOT — цифровая система футбольного клуба</title>
-  <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
+  <meta property="og:image" content="https://fbotru.github.io/modules_docs/assets/media/og-cover-1200.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Герб SportsSmartBot на фоне спортивной арены">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>SportsSmartBot — клубная операционная система в Telegram</title>
+  <link rel="icon" href="assets/brand-crest.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Oswald:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#content">К содержанию</a>
+
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="FBOT, начало страницы">
-      <img src="assets/brand-mark.svg" alt="" width="38" height="44">
-      <span><strong>FBOT</strong><small>CLUB SYSTEM</small></span>
-    </a>
-    <nav aria-label="Основная навигация">
-      <a href="#modules">Модули</a>
-      <a href="#smm-styles">Стили SMM</a>
-      <a href="#connect">Подключение</a>
-    </nav>
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="SportsSmartBot — к началу страницы">
+        <img src="assets/brand-crest.svg" alt="" width="42" height="49">
+        <span class="brand__name">
+          <strong>Sports<span>Smart</span>Bot</strong>
+          <small>Club operating system</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span>Меню</span><i aria-hidden="true"></i>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="#capabilities">Возможности</a>
+        <a href="#subscriptions">Подписки</a>
+        <a href="#smm">SMM</a>
+        <a href="#workflow">Как работает</a>
+        <a class="site-nav__cta" href="{{TELEGRAM_URL}}" target="_blank" rel="noopener noreferrer">Открыть бота <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
   </header>
 
   <main id="content">
-    <section class="hero" id="top">
-      <div class="hero__grid" aria-hidden="true"></div>
-      <div class="hero__copy">
-        <p class="eyebrow"><span></span> DIGITAL FOOTBALL OPERATIONS</p>
-        <h1>Клуб работает<br><em>как команда.</em></h1>
-        <p class="hero__lead">FBOT собирает игровую, организационную и медийную работу клуба внутри Telegram — без лишних сервисов и ручной рутины.</p>
-        <div class="hero__actions">
-          <a class="button button--primary" href="#modules">Изучить модули</a>
-          <a class="button button--ghost" href="https://t.me/ReddysAdmin_bot" target="_blank" rel="noopener noreferrer">Открыть бота ↗</a>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <picture class="hero__media" aria-hidden="true">
+        <source media="(max-width: 700px)" type="image/avif" srcset="assets/media/hero-mobile-720.avif 720w, assets/media/hero-mobile-1120.avif 1120w" sizes="100vw">
+        <source type="image/avif" srcset="assets/media/hero-desktop-960.avif 960w, assets/media/hero-desktop-1600.avif 1600w" sizes="100vw">
+        <source media="(max-width: 700px)" type="image/webp" srcset="assets/media/hero-mobile-720.webp 720w, assets/media/hero-mobile-1120.webp 1120w" sizes="100vw">
+        <source type="image/webp" srcset="assets/media/hero-desktop-960.webp 960w, assets/media/hero-desktop-1600.webp 1600w" sizes="100vw">
+        <img src="assets/media/hero-desktop-1600.webp" width="1600" height="686" alt="" fetchpriority="high" decoding="async" data-media-role="hero">
+      </picture>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__content shell">
+        <div class="hero__copy">
+          <p class="overline"><span class="brand-rule" aria-hidden="true"></span> Digital club operations</p>
+          <h1 id="hero-title">Автоматическое<br><em>управление клубом</em></h1>
+          <p class="hero__lead">SportsSmartBot собирает матчи, тренировки, платежи, статистику и контент в Telegram. Один бот — весь клубный ритм.</p>
+          <div class="button-row">
+            <a class="button button--gold" href="#subscriptions">Выбрать подписку</a>
+            <a class="button button--line" href="{{TELEGRAM_URL}}" target="_blank" rel="noopener noreferrer">Открыть бота <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero__seal" aria-label="SportsSmartBot, клубная операционная система">
+          <img src="assets/brand-crest.svg" alt="" width="112" height="131">
+          <span>SSB</span>
+          <small>Club operating system</small>
+        </div>
+        <div class="hero__sports" aria-label="Для командных видов спорта">
+          <span>Football</span><i aria-hidden="true"></i>
+          <span>Basketball</span><i aria-hidden="true"></i>
+          <span>Volleyball</span><i aria-hidden="true"></i>
+          <span>Team sports</span>
         </div>
       </div>
-      <div class="hero__visual" aria-label="Четыре модуля FBOT">
-        <div class="pitch"><span></span><span></span><span></span></div>
-        <div class="orbit orbit--one"><b>01</b><span>TRAINING</span></div>
-        <div class="orbit orbit--two"><b>02</b><span>KPI</span></div>
-        <div class="orbit orbit--three"><b>03</b><span>PROTOCOL</span></div>
-        <div class="orbit orbit--four"><b>04</b><span>SMM</span></div>
-        <div class="hero__crest"><img src="assets/brand-mark.svg" alt="" width="96" height="112"><strong>4</strong><span>МОДУЛЯ</span></div>
-      </div>
-      <div class="hero__stats">
-        <div><strong>01</strong><span>единая точка управления</span></div>
-        <div><strong>24/7</strong><span>бот работает вместе с клубом</span></div>
-        <div><strong>∞</strong><span>возможностей для роста</span></div>
+    </section>
+
+    <section class="shift section section--paper" aria-labelledby="shift-title">
+      <div class="shell">
+        <header class="section-heading section-heading--dark">
+          <p class="overline">От рутины к результату</p>
+          <h2 id="shift-title">Данные клуба начинают работать на клуб</h2>
+          <p>Меньше ручной координации. Больше времени на игру.</p>
+        </header>
+        <div class="shift__layout">
+          <ol class="transformation-list">{{PROBLEM_RESULTS}}</ol>
+          <figure class="platform">
+            {{PLATFORM_PICTURE}}
+            <figcaption><b>Одна рабочая среда</b><span>Опросы, составы, протоколы, статистика и контент — внутри Telegram.</span></figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
-    <section class="section modules" id="modules">
-      <div class="section-heading">
-        <p class="eyebrow">Система по частям</p>
-        <h2>Выберите то, что нужно клубу сейчас</h2>
-        <p>Каждый модуль решает отдельную задачу и подключается независимо. Вместе они образуют единый рабочий контур.</p>
+    <section class="capabilities section" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="shell">
+        <header class="section-heading section-heading--split">
+          <div>
+            <p class="overline">Один продукт</p>
+            <h2 id="capabilities-title">Пять рабочих направлений</h2>
+          </div>
+          <p>Возможности связаны общими данными клуба и растут вместе с уровнем подписки. Направления не продаются по отдельности.</p>
+        </header>
+        <figure class="capability-visual">
+          {{CAPABILITIES_PICTURE}}
+          <figcaption>Один бот связывает спортивную, организационную, финансовую и медийную работу.</figcaption>
+        </figure>
+        <div class="capability-list">{{CAPABILITIES}}</div>
       </div>
-      <div class="module-grid">{{MODULE_CARDS}}</div>
     </section>
 
-    <section class="section module-list" aria-label="Подробности модулей">
-      {{MODULE_SECTIONS}}
-    </section>
+    <section class="subscriptions section section--paper" id="subscriptions" aria-labelledby="subscriptions-title">
+      <div class="shell shell--wide">
+        <header class="section-heading section-heading--dark section-heading--split">
+          <div>
+            <p class="overline">Подписки</p>
+            <h2 id="subscriptions-title">Три уровня одного продукта</h2>
+          </div>
+          <p>Начните с рабочего ядра клуба и расширяйте сценарии по мере задач команды. Стандартная — сбалансированный уровень для полного клубного ритма.</p>
+        </header>
+        <div class="tier-grid">{{TIERS}}</div>
 
-    <section class="section smm-showcase" id="smm-styles">
-      <div class="section-heading section-heading--split">
-        <div><p class="eyebrow">SMM / STYLE SYSTEM</p><h2>Клуб узнают<br>с первого кадра</h2></div>
-        <p>Не набор случайных шаблонов, а целостный визуальный язык. Выбираем направление, адаптируем герб, палитру и детали — затем данные сами превращаются в готовые публикации.</p>
+        <div class="comparison" aria-labelledby="comparison-title">
+          <div class="comparison__heading">
+            <p class="overline">Сравнение</p>
+            <h3 id="comparison-title">Разница видна сразу</h3>
+          </div>
+          {{COMPARISON}}
+          <div class="mobile-comparison" aria-label="Подписки на мобильном устройстве">
+            {{MOBILE_COMPARISON}}
+          </div>
+        </div>
       </div>
-      <div class="gallery">{{GALLERY}}</div>
     </section>
 
-    <section class="section workflow">
-      <div class="section-heading"><p class="eyebrow">Как это работает</p><h2>От события до результата</h2></div>
-      <ol>
-        <li><span>01</span><strong>Бот получает данные</strong><p>Расписание, составы, протоколы и результаты становятся единым источником.</p></li>
-        <li><span>02</span><strong>Модуль выполняет работу</strong><p>Напоминает, считает, отправляет, формирует отчёт или собирает визуал.</p></li>
-        <li><span>03</span><strong>Клуб получает результат</strong><p>Игроки и администраторы видят всё в привычном интерфейсе Telegram.</p></li>
-      </ol>
-    </section>
+    <section class="smm section" id="smm" aria-labelledby="smm-title">
+      <div class="shell">
+        <header class="section-heading section-heading--split">
+          <div>
+            <p class="overline">SMM / Club media</p>
+            <h2 id="smm-title">От опроса на матч до готовой публикации</h2>
+          </div>
+          <p>Бот автоматически создаёт и выпускает текстовый, графический и видеоконтент: анонсы, составы, результаты, MVP, таблицы и анимацию.</p>
+        </header>
 
-    <section class="section connect" id="connect">
-      <div>
-        <p class="eyebrow">Подключение</p>
-        <h2>Начните с одного модуля.<br>Добавляйте остальные по мере роста.</h2>
+        <div class="style-showcase" aria-labelledby="styles-title">
+          <header class="style-showcase__heading">
+            <div>
+              <p class="overline">Стили оформления</p>
+              <h3 id="styles-title">Один контент. Три характера.</h3>
+            </div>
+            <p>Клуб выбирает визуальную систему, а SportsSmartBot сам создаёт в ней весь пакет публикаций — от анонса до итогов недели.</p>
+          </header>
+          <div class="style-gallery">{{STYLE_GALLERY}}</div>
+        </div>
+
+        <div class="smm-formats">
+          <p class="overline">Форматы публикаций</p>
+          <h3>Что бот выпускает автоматически</h3>
+        </div>
+        <div class="smm-gallery">{{SMM_GALLERY}}</div>
+
+        <div class="smm-growth">
+          <header>
+            <p class="overline">Как растёт SMM</p>
+            <h2>Больше сценариев на каждом уровне</h2>
+          </header>
+          <ol>{{SMM_LEVELS}}</ol>
+        </div>
       </div>
-      <div class="connect__card">
-        <span class="connect__icon">↗</span>
-        <p>Откройте Telegram-бот и перейдите:</p>
-        <strong>Клуб <i>→</i> Модули</strong>
-        <p>Вы увидите активные возможности и сможете отправить заявку на подключение.</p>
-        <a class="button button--primary" href="https://t.me/ReddysAdmin_bot" target="_blank" rel="noopener noreferrer">Перейти в Telegram-бот ↗</a>
+    </section>
+
+    <section class="workflow section section--paper" id="workflow" aria-labelledby="workflow-title">
+      <div class="shell">
+        <header class="section-heading section-heading--dark section-heading--split">
+          <div>
+            <p class="overline">Как работает</p>
+            <h2 id="workflow-title">Четыре шага до результата</h2>
+          </div>
+          <p>Клуб остаётся в знакомом интерфейсе Telegram, а SportsSmartBot связывает данные с нужными сценариями.</p>
+        </header>
+        <figure class="workflow-visual">
+          {{WORKFLOW_PICTURE}}
+        </figure>
+        <ol class="workflow-steps">{{WORKFLOW_STEPS}}</ol>
+      </div>
+    </section>
+
+    <section class="automation section" id="automation" aria-labelledby="automation-title">
+      <div class="shell">
+        <header class="section-heading section-heading--split">
+          <div>
+            <p class="overline">Автоматизация клуба</p>
+            <h2 id="automation-title">Рутина работает сама</h2>
+          </div>
+          <p>Люди принимают решения, а SportsSmartBot собирает данные, запускает повторяющиеся сценарии и доставляет готовый результат.</p>
+        </header>
+        <ol class="automation-list">{{AUTOMATION}}</ol>
+      </div>
+    </section>
+
+    <section class="closing" id="connect" aria-labelledby="closing-title">
+      {{CTA_PICTURE}}
+      <div class="closing__shade" aria-hidden="true"></div>
+      <div class="closing__content shell">
+        <p class="overline"><span class="brand-rule" aria-hidden="true"></span> SportsSmartBot</p>
+        <h2 id="closing-title">Пусть команда занимается спортом, а не таблицами и напоминаниями</h2>
+        <p>Автоматизируем рутину. Оставляем спорт.</p>
+        <a class="button button--gold" href="{{TELEGRAM_URL}}" target="_blank" rel="noopener noreferrer">Открыть бота <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <a class="brand" href="#top"><img src="assets/brand-mark.svg" alt="" width="34" height="40"><span><strong>FBOT</strong><small>FOOTBALL CLUB SYSTEM</small></span></a>
-    <p>Автоматизируем рутину. Оставляем футбол. <a href="https://t.me/ReddysAdmin_bot" target="_blank" rel="noopener noreferrer">Открыть FBOT ↗</a></p>
+  <footer class="site-footer">
+    <div class="site-footer__main shell">
+      <a class="brand" href="#top" aria-label="SportsSmartBot — к началу страницы">
+        <img src="assets/brand-crest.svg" alt="" width="46" height="54">
+        <span class="brand__name">
+          <strong>Sports<span>Smart</span>Bot</strong>
+          <small>Club operating system</small>
+        </span>
+      </a>
+      <p>Telegram-система для операционной работы клуба в командных видах спорта.</p>
+      <nav aria-label="Навигация в подвале">
+        <a href="#capabilities">Возможности</a>
+        <a href="#subscriptions">Подписки</a>
+        <a href="#smm">SMM</a>
+        <a href="#workflow">Как работает</a>
+      </nav>
+    </div>
+    <div class="site-footer__bottom shell">
+      <span>Автоматизируем рутину. Оставляем спорт.</span>
+      <a href="{{TELEGRAM_URL}}" target="_blank" rel="noopener noreferrer">Открыть бота <span aria-hidden="true">↗</span></a>
+    </div>
   </footer>
 
-  <dialog class="lightbox" aria-label="Просмотр визуального стиля">
-    <button type="button" class="lightbox__close" aria-label="Закрыть">×</button>
-    <img src="" alt="">
-    <p></p>
+  <dialog class="lightbox" aria-labelledby="lightbox-title">
+    <button class="lightbox__close" type="button" aria-label="Закрыть просмотр">×</button>
+    <img src="assets/media/smm-match-announce-1000.webp" alt="" width="1000" height="1000" loading="lazy" decoding="async" data-media-role="content">
+    <div class="lightbox__caption">
+      <p class="overline">Club media</p>
+      <h2 id="lightbox-title">Анонс матча</h2>
+    </div>
   </dialog>
-  <script src="app.js"></script>
+
+  <script src="app.js" defer></script>
 </body>
 </html>
